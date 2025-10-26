@@ -1,9 +1,10 @@
 import express, { Request, Response } from "express";
+import { myname } from "@repo/common/config";
 
 const app = express();
 
 app.get("/", (req: Request, res: Response) => {
-    res.json({ message: "Hello World" });
+    res.json({ message: `Hi my name is ${myname}` });
 });
 
 app.listen(4000, () => {
